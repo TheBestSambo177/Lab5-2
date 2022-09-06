@@ -25,6 +25,9 @@ class user {
 	this.email = email; 
 	this.password = password;
 	}
+
+	//Methods
+	
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -143,3 +146,34 @@ function addToCartUpdate(id) {
 function removeItem(itemID) {
  document.getElementById(itemID).remove();
 }
+
+
+//Expresion function
+let expresionSum = function(a,b) {
+	//Make a + b
+	alert("Expresion function: " + (a + b));
+	return a+b;
+}
+
+//Call expresion sum
+//expresionSum(4,7);
+
+//Regular function
+function regularSum(a,b) {
+	//Make a + b
+	alert("Regular function " + (a+b));
+	return a+b;
+}
+
+//Call Regular sum
+//regularSum(7,8);
+
+//Arrow function
+let arrowSum = (a,b) => {
+	//Make a + b
+	alert("Arrow function " + (a+b));
+	return a+b;
+}
+
+//Call to execute arrow function
+//arrowSum(10,11);
