@@ -8,6 +8,24 @@ let topMovies = [{id: 0, title: "The Shawshank Redemption", year: 1994, image_ur
 				];
 
 
+//------------------------------------------------------------------------------------------------------
+//List of users
+let users = [{username: "Daniel", email: "daniel@eit.ac.nz", password: "daniel1234"},
+		{username: "John", email: "john@eit.ac.nz", password: "john1234"},
+		{username: "Ian", email: "ian@eit.ac.nz", password: "ian1234"},
+		{username: "Ish", email: "ish@eit.ac.nz", password: "ish1234"},
+		{username: "Noor", email: "noor@eit.ac.nz", password: "noor1234"},
+	];
+
+//User class
+class user {
+	//Properties (props) & Constructor
+	constructor(username, email, password) {
+	this.username = username;
+	this.email = email; 
+	this.password = password;
+	}
+}
 
 //------------------------------------------------------------------------------------------------------
 //JS CLASSES AND OBJECTS
