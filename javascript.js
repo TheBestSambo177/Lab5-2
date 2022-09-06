@@ -27,7 +27,43 @@ class user {
 	}
 
 	//Methods
-	
+	signUp(userList) {
+		//Check if the email exists
+		let foundObject = null;
+		for (let i=0; i < userList.length; i++) {
+			if (this.email == userList[i].email) {
+				foundObject = userList [i];
+			}
+		}
+
+		if (foundObject != null) {
+			alert("Email Exists already");
+		} else {
+			alert("Account Created")
+			users.push(this);
+		}
+	}
+
+	signIn(userList) {
+		let foundUser = null;
+		for (let i=0; i < userList.length; i++) {
+			if (this.email == userList[i].email && this.password == userList[i],password) {
+				foundUser = userList[i];//Return the matching user
+				alert("HELLO " + foundUser.username + "Logged in");
+				return foundUser;
+			}
+		}
+
+		alert("Wrong");
+		return null;
+
+	}
+}
+
+
+//Create user
+function createUser() {
+	let enteredUsername = document.getElementById("signup_username").value;
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -67,6 +103,8 @@ let aMovie = new Movie(topMovies[0].id, topMovies[0].title, topMovies[0].year, t
 //console.log(document.getElementById("movie-list"));
 document.getElementById("movie-list").innerHTML = aMovie.render();
 
+//Create the sign up object and display it on webpage
+//document.getElementById("sign-up").innerHTML = aSignUp.signUp();
 
 //------------------------------------------
 //Create a list of movie objects & display on webpage UI
